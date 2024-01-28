@@ -42,7 +42,7 @@ model Account {
 
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 
-  // fields: [userId] is referred to 
+  // fields: [userId] (in this model) is referred to 
   //  references: [id] from 'User'
   @@unique([provider, providerAccountId])
 }
