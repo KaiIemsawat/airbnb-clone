@@ -1,20 +1,19 @@
 "use client";
 
-import axios from "axios";
-import { useState, useCallback } from "react";
-import { AiFillGithub } from "react-icons/ai";
-import { FcGoogle } from "react-icons/fc";
-import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
+import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
+import { AiFillGithub } from "react-icons/ai";
+import { FcGoogle } from "react-icons/fc";
 
-import Modal from "./Modal";
-import Heading from "../Heading";
-import Input from "../inputs/input";
+import useLoginModal from "@/app/hooks/useLoginModal";
+import useRegisterModal from "@/app/hooks/useRegisterModal";
 import toast from "react-hot-toast";
 import Button from "../Button";
-import useRegisterModal from "@/app/hooks/useRegisterModal";
-import useLoginModal from "@/app/hooks/useLoginModal";
+import Heading from "../Heading";
+import Input from "../inputs/input";
+import Modal from "./Modal";
 
 const LoginModal = () => {
     const router = useRouter();
@@ -94,7 +93,7 @@ const LoginModal = () => {
                 outline
                 label="Continue with GitHub"
                 icon={AiFillGithub}
-                onClick={() => {}}
+                onClick={() => signIn("github")}
             />
             <div className="text-neutral-500 text-center mt-4 font-light">
                 <div className="flex flex-row items-center gap-2 justify-center">
