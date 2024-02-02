@@ -9,6 +9,7 @@ import Heading from "../Heading";
 import { categories } from "../navbar/Categories";
 import CategoryInput from "../inputs/CategoryInput";
 import CountrySelect from "../inputs/CountrySelect";
+import Map from "../Map";
 
 enum STEPS {
     CATEGORY = 0,
@@ -123,6 +124,7 @@ const RentModal = () => {
                     value={location}
                     onChange={(value) => setCustomValue("location", value)}
                 />
+                <Map />
             </div>
         );
     }
