@@ -46,6 +46,7 @@ const RentModal = () => {
     });
 
     const category = watch("category");
+    const location = watch("location");
 
     const setCustomValue = (id: string, value: any) => {
         // setValue comes from useForm
@@ -118,7 +119,10 @@ const RentModal = () => {
                     title="Where is your place located?"
                     subtitle="Pick a category"
                 />
-                <CountrySelect />
+                <CountrySelect
+                    value={location}
+                    onChange={(value) => setCustomValue("location", value)}
+                />
             </div>
         );
     }
