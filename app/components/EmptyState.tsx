@@ -20,7 +20,7 @@ const EmptyState: React.FC<EmptyStateProps> = ({
     return (
         <div className="h-[60vh] flex flex-col gap-2 justify-center items-center">
             <Heading center title={title} subtitle={subtitle} />
-            <div className="w-48 mt-48">
+            <div className="w-48 mt-4">
                 {showReset && (
                     <Button
                         outline
