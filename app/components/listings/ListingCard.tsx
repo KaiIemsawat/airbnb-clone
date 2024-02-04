@@ -51,6 +51,7 @@ const ListingCard: React.FC<ListingCardProps> = ({
         if (reservation) {
             return reservation.totalPrice;
         }
+
         return data.price;
     }, [reservation, data.price]);
 
@@ -94,6 +95,9 @@ const ListingCard: React.FC<ListingCardProps> = ({
                             currentUser={currentUser}
                         />
                     </div>
+                </div>
+                <div className="font-semibold text-lg">
+                    {location?.region}, {location?.label}
                 </div>
             </div>
         </div>
